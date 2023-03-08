@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.2",
+    "node": "^19.6.1"
+  },
+  "scripts": {
+    "start": "node lib/server"
+  }
+}
