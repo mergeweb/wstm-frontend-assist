@@ -1,0 +1,209 @@
+/* NEW INSTA CSS */
+#instafeed-row {
+	max-width: 100% !important;;
+}
+
+#instafeed-row .col-6.col-lg-3 {
+	padding: 7.5px;
+	max-width: 50% !important;
+}
+
+.variable-page-data {
+	display: none;
+}
+
+.sfPageEditor .variable-page-data {
+	display: unset;
+}
+
+.igPhotoLink .caption-link-wrapper {
+	opacity: 0;
+	-webkit-transition: .3s all;
+	-o-transition: .3s all;
+	transition: .3s all;
+	color: white;
+	background: rgba(33,21,81, .9);
+}
+
+.igPhotoLink:hover .caption-link-wrapper {
+	opacity: 1;
+}
+
+.caption-link-wrapper {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 32px;
+	background: #211551;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+}
+
+.igViewMore {
+	text-align: center;
+	margin: 0px;
+}
+
+.igCapLoadHere {
+	text-align: left;
+	height: 100px;
+	width: 100%;
+	white-space: pre-line;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.igPhotoLink {
+	height: 0px;
+	overflow: hidden;
+	display: block;
+	padding-bottom: 100%;
+	background: #211551;
+}
+
+.small.igViewMore.btn.btn-primary {
+	color: #211551;
+	background: white;
+	border-radius: 0px;
+	width: 100%;
+	border: 0px;
+	padding: 4px 16px 6px 16px;
+}
+.small.igViewMore.btn.btn-primary:active {
+	background: #8252c7;
+}
+
+/* Ratio Img CSS */
+
+
+.ratio_container {
+	height: 0px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%; }
+.ratio_container.sixteen-nine {
+	width: 100%;
+	padding-bottom: 56.25%; }
+.ratio_container.nine-sixteen {
+	width: 100%;
+	padding-bottom: 177.77778%; }
+.ratio_container.four-three {
+	width: 100%;
+	padding-bottom: 75%; }
+.ratio_container.three-four {
+	width: 100%;
+	padding-bottom: 133.3333%; }
+.ratio_container.one-one {
+	width: 100%;
+	padding-bottom: 100%; }
+.ratio_container.wm-banner {
+	width: 100%;
+	padding-bottom: 23.4375%; }
+
+.in_ratio_constraint {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: inherit;
+	overflow: hidden;
+	margin: 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center; }
+.in_ratio_constraint.center {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center; }
+.in_ratio_constraint.center-left {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center; }
+.in_ratio_constraint.center-right {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center; }
+.in_ratio_constraint.center-top {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start; }
+.in_ratio_constraint.center-bottom {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end; }
+.in_ratio_constraint.top-left {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start; }
+.in_ratio_constraint.top-right {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start; }
+.in_ratio_constraint.bottom-left {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end; }
+.in_ratio_constraint.bottom-right {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end; }
+
+.in_ratio_constraint img, .in_ratio_constraint .ratio-media {
+	display: block; }
+
+.portrait img, .portrait .ratio-media {
+	min-width: 100%;
+	width: 100%;
+	height: auto; }
+
+.landscape img, .landscape .ratio-media {
+	min-height: 100%;
+	height: 100%;
+	width: auto; }
