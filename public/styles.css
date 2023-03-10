@@ -1,3 +1,85 @@
 /**
 * CSS Styles
 */
+
+.stats-slider-section {
+  margin: 2rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.stats-slider-swiper {
+  width: 100%;
+  background-color: #e4e4e4;
+  padding: 2rem 0;
+}
+
+.stats-slider-card,
+.stats-slider-card__upper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.stats-slider-card__upper-container {
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  width: 100%;
+}
+
+.stats-slider-card__stat {
+  font-size: 2.75rem;
+}
+
+.stats-headline {
+  font-family: Mercury Display;
+}
+
+.stats-slider-swiper [class^="swiper-button-"]::after {
+  content: "";
+}
+
+/* Rotates svg to face opposite direction of the "next" svg */
+.stats-slider-prev svg {
+  transform: rotate(180deg);
+}
+
+.stats-slider-next svg,
+.stats-slider-prev svg {
+  height: 75px;
+  width: 75px;
+}
+
+.stats-slider-prev button,
+.stats-slider-next button {
+  background: none;
+  border: none;
+}
+
+.stats-slider-next {
+  right: 0;
+  top: 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 34%,
+    rgba(228, 228, 228, 1) 100%
+  );
+  width: 400px;
+  height: calc(100% + 4rem);
+}
+
+.stats-slider-prev {
+  left: 0;
+  top: 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 34%,
+    rgba(228, 228, 228, 1) 100%
+  );
+  width: 400px;
+  height: calc(100% + 4rem);
+}
