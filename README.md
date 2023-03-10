@@ -80,6 +80,7 @@ const swiper = new Swiper('.stats-slider-swiper', {
     grabCursor: true,
     slidesPerView: 1.5,
     spaceBetween: 0,
+    freeMode: true,
 
     keyboard: {
         enabled: true,
@@ -107,6 +108,7 @@ const swiper = new Swiper('.stats-slider-swiper', {
 - `loop: true` : slider will be cyclical. It is false be default.
 - `grabCursor: true` : if true, sets cursor icon to "grab" on hover. Improves usability, optional property.
 - `spaceBetween` : sets the space in px between each slide. In this particular example, spaceBetween is set to 0 pixels, therefore you would not need to add this property to the class, but is present only for this example.
+- `freeMode: true` : if set to true, this allows the user to move the carousel freely.
 - `keyboard` : allows navigation using keyboard. Improves accessibility.
 - `SlidesPerView` : sets the default number of swiper-slides in viewport. Using decimals leads to exposing the next slide but that decimal value.
   - `breakpoints` : Breakpoints can be added to customize responsive design. The breakpoint number refers to the amount of pixels. In this example we are setting breakpoints and the number of slides in the viewpoint for each breakpoint.

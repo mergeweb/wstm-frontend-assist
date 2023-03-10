@@ -2,6 +2,7 @@ const swiper = new Swiper('.stats-slider-swiper', {
     // Optional parameters
     grabCursor: true,
     slidesPerView: 1.5,
+    freeMode: true,
 
     keyboard: {
         enabled: true,
