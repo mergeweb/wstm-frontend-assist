@@ -1,7 +1,7 @@
 const swiper = new Swiper('.stats-slider-swiper', {
     // Optional parameters
     grabCursor: true,
-    slidesPerView: 1.5,
+    slidesPerView: 1,
     freeMode: true,
 
     keyboard: {

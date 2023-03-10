@@ -84,3 +84,24 @@
   width: 400px;
   height: calc(100% + 4rem);
 }
+
+@media (max-width: 768px) {
+  .stats-slider-next {
+    background: none;
+    width: unset;
+    right: 10px !important;
+  }
+  .stats-slider-prev {
+    background: none;
+    width: unset;
+    left: 10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-slider-next svg,
+  .stats-slider-prev svg {
+    height: 45px;
+    width: 45px;
+  }
+}
