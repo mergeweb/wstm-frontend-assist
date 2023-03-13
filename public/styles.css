@@ -2,9 +2,11 @@
 * CSS Styles
 */
 
-/* Stats Slider */
+/**
+Stats Slider 
+*/
 .stats-slider-section {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   width: 100%;
   position: relative;
 }
@@ -104,4 +106,134 @@
     height: 45px;
     width: 45px;
   }
+}
+
+/**
+Sticky Button 
+*/
+
+.sticky-button-section {
+  width: 100%;
+  min-height: 500px;
+  background-color: #211551;
+  /* position: relative is important for the button. Think of this as a reference to where the button will be placed. */
+  position: relative;
+}
+
+.sticky-button-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.sticky-button-content-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.sticky-button-content-headline,
+.sticky-button-content-headline-two {
+  color: #ffffff;
+  font-size: 44px;
+  margin: 0.5rem 0;
+}
+
+.sticky-button-content-marketing-headline {
+  color: #8252c7;
+  margin: 1rem 0;
+}
+
+.sticky-button-content {
+  color: #ffffff;
+}
+
+/* Sticky Button Initial State */
+
+.sticky-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8252c7;
+  height: 30%;
+  width: 475px;
+  /* transition time between initial state and scroll state */
+  transition: all 0.5s;
+  /* position: absolute will position the element in referrence to the ancestor element (the ancestor element that is position: relative). This allows your to control and move the element anywhere in referrence to said ancestor element. Use properities like  top, botton, left, right to control the position. */
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  left: auto;
+  /* setting for z-index will have this element position over other elements. */
+  z-index: 10;
+  /* clip path creates a region of the element that gets clipped (liking clipping a piece of paper with scissors). Parts inside where clipped is shown, parts on the outside is not shown. */
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.sticky-button-container__inner-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 0 1rem 3rem;
+}
+
+.sticky-button-container p {
+  color: #211551;
+  width: 90%;
+}
+
+.sticky-button {
+  background: #211551;
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: all 0.5s;
+}
+
+.sticky-button a {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.sticky-button:hover a {
+  color: #8252c7;
+}
+
+/* Sticky Button: Scroll State */
+
+.sticky-button-container.beyond-threshold {
+  background: none;
+  position: fixed;
+  bottom: 2rem;
+  height: auto;
+  width: auto;
+  clip-path: none;
+}
+
+.sticky-button-container.beyond-threshold p {
+  display: none;
+}
+
+.sticky-button-container.beyond-threshold
+  .sticky-button-container__inner-container {
+  align-items: flex-end;
+  padding: 0 2rem 0 0;
+  width: 100%;
+}
+
+.sticky-button-container.beyond-threshold .sticky-button {
+  background-color: #8252c7;
+  border-radius: 30px !important;
+  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-button-container.beyond-threshold .sticky-button:hover a {
+  color: #211551;
 }

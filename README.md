@@ -2,16 +2,20 @@
 
 Code and documentation for Westminster College
 
-README pending...
+# Table of Contents
+
+- [Stats Sliders](#stats-slider)
+- [Sticky Button](#sticky-button)
 
 # Stats Slider
 
+The code example can be found in the `stats-slider.html` file in the public folder.
 The stats sliders uses a JavaScript library called Swiper JS. This documentation will go over the proper workflow to implement the desired stats-slider:
 
-- Swiper JS installation
-- HTML construction
-- JavaScript initialization
-- CSS Styling
+- [Swiper JS installation](#swiper-js-installation)
+- [HTML construction](#html-construction)
+- [JavaScript initialization](#javascript-initialization)
+- [CSS Styling](#css-styling)
 
 ## Swiper JS Installation
 
@@ -219,3 +223,179 @@ There are several approaches to this, but the buttons will be our focus. Essenti
 #### And _Voila!_ You have yourself a stats-slider!
 
 This same concept of using Swiper JS and styling the buttons appropraitely can be applied to other design elements to give off a trail/ghost effect.
+
+# Sticky Button
+
+The code example can be found in `stick-button.html` in the public directory.
+This documentation will cover how to style a the initial state of the button, as well as using some JavaScript to listen to the HTML DOM to transform the button into a sticky button that will stay on the bottom right side of the page.
+
+- [Initial Styling](#initial-styling)
+- [JavaScript](#javascript-for-sticky-button)
+- [Sticky Styling](#sticky-styling)
+
+## Initial Styling
+
+The complete styling for the initial state is located in `styles.css`. One styling property to note is the use of the `clip-path` property. The [Clip Path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path) property creates a region of the element that gets clipped (liking clipping a piece of paper with scissors). Parts inside where clipped is shown, parts on the outside is not shown.
+[Clippy](https://bennettfeely.com/clippy/), a clip-path css generator was used for this specific code example.
+
+```
+/**
+Sticky Button
+*/
+
+.sticky-button-section {
+  width: 100%;
+  min-height: 500px;
+  background-color: #211551;
+  /* position: relative is important for the button. Think of this as a reference to where the button will be placed. */
+  position: relative;
+}
+
+.sticky-button-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.sticky-button-content-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.sticky-button-content-headline,
+.sticky-button-content-headline-two {
+  color: #ffffff;
+  font-size: 44px;
+  margin: 0.5rem 0;
+}
+
+.sticky-button-content-marketing-headline {
+  color: #8252c7;
+  margin: 1rem 0;
+}
+
+.sticky-button-content {
+  color: #ffffff;
+}
+
+/* Sticky Button Initial State */
+
+.sticky-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8252c7;
+  height: 30%;
+  width: 475px;
+  /* transition time between initial state and scroll state */
+  transition: all 0.5s;
+  /* position: absolute will position the element in referrence to the ancestor element (the ancestor element that is position: relative). This allows your to control and move the element anywhere in referrence to said ancestor element. Use properities like  top, botton, left, right to control the position. */
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  left: auto;
+  /* setting for z-index will have this element position over other elements. */
+  z-index: 10;
+  /* clip path creates a region of the element that gets clipped (liking clipping a piece of paper with scissors). Parts inside where clipped is shown, parts on the outside is not shown. */
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.sticky-button-container__inner-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 0 1rem 3rem;
+}
+
+.sticky-button-container p {
+  color: #211551;
+  width: 90%;
+}
+
+.sticky-button {
+  background: #211551;
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: all 0.5s;
+}
+
+.sticky-button a {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.sticky-button:hover a {
+  color: #8252c7;
+}
+```
+
+## JavaScript for Sticky Button
+
+The basic function of the JavaScript is to listen for when the viewport has scrolled past the location of the button. If this condition true runs true, a class is added to the sticky button's classList. Then CSS will take over for the animation.
+
+```
+// Query Sticky Button Container
+const stickyButtonContainer = document.getElementById("sticky-button-container")
+
+// Captures the y-axis position of the sticky button
+let stickyButtonTop = stickyButtonContainer.getBoundingClientRect().top;
+
+window.addEventListener('scroll', () => {
+
+    // If stickyButtonTop plus an additional 400 (to accommadate some additional scroll) is less than the amount of pixels scrolled vertically on the page, then add this classlist
+    if (window.scrollY > (stickyButtonTop + 400)) {
+        stickyButtonContainer.classList.add('beyond-threshold')
+    } else {
+        if (stickyButtonContainer.classList.contains('beyond-threshold')) {
+            stickyButtonContainer.classList.remove('beyond-threshold')
+        }
+    }
+});
+```
+
+## Sticky Styling
+
+Stylings are made to selectors that are children under the `.beyond-threshold` className.
+
+```
+/* Sticky Button: Scroll State */
+
+.sticky-button-container.beyond-threshold {
+  background: none;
+  position: fixed;
+  bottom: 2rem;
+  height: auto;
+  width: auto;
+  clip-path: none;
+}
+
+.sticky-button-container.beyond-threshold p {
+  display: none;
+}
+
+.sticky-button-container.beyond-threshold
+  .sticky-button-container__inner-container {
+  align-items: flex-end;
+  padding: 0 2rem 0 0;
+  width: 100%;
+}
+
+.sticky-button-container.beyond-threshold .sticky-button {
+  background-color: #8252c7;
+  border-radius: 30px !important;
+  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-button-container.beyond-threshold .sticky-button:hover a {
+  color: #211551;
+}
+```
