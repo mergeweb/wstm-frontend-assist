@@ -35,7 +35,7 @@ Creating great CSS gradients quickly gets a lot easier with tools like [CSS Grad
 
 # Stats Slider
 
-The code example can be found in the [Stats Slider HTML](/stats-slider.html) file in the public folder.
+The code example can be found in the [Stats Slider HTML](stats-slider.html) file in the public folder.
 The stats sliders uses a JavaScript library called Swiper JS. This documentation will go over the proper workflow to implement the desired stats-slider:
 
 - [Swiper JS installation](#swiper-js-installation)
