@@ -97,7 +97,8 @@ Swiper JS requires specific constructs to both the markup and the classnames. Th
 
 ## JavaScript Initialization
 
-Code Example: [Stats Slider JavaScript](_resources/js/stats-slider.js)
+Code Example: [Stats Slider JavaScript](public/_resources/js/stats-slider.js)
+
 To initialize the Swiper, we will need to add some code into a JS file. A JS file was create named `_resources/js/stats-slider.js` and added the script file in the footer of our HTML file **AFTER** the Swiper JS script file (see stats-slider.html for example).
 
 Essentially, Swiper uses a OOP to configure sliders. There is plenty of additional documentation on the Swiper API that can be found here: https://swiperjs.com/swiper-api
@@ -367,7 +368,8 @@ Sticky Button
 
 ## JavaScript for Sticky Button
 
-Code Example: [Sticky Button JavaScript](_resources/js/sticky-button.js)
+Code Example: [Sticky Button JavaScript](public/_resources/js/sticky-button.js)
+
 The basic function of the JavaScript is to listen for when the viewport has scrolled past the location of the button. If this condition true runs true, a class is added to the sticky button's classList. Then CSS will take over for the animation.
 
 ```
