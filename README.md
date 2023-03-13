@@ -35,7 +35,7 @@ Creating great CSS gradients quickly gets a lot easier with tools like [CSS Grad
 
 # Stats Slider
 
-The code example can be found in the [Stats Slider HTML](stats-slider.html) file in the public folder.
+The code example can be found in the [Stats Slider HTML](public/stats-slider.html) file in the public folder.
 The stats sliders uses a JavaScript library called Swiper JS. This documentation will go over the proper workflow to implement the desired stats-slider:
 
 - [Swiper JS installation](#swiper-js-installation)
@@ -252,7 +252,7 @@ This same concept of using Swiper JS and styling the buttons appropraitely can b
 
 # Sticky Button
 
-The code example can be found in `stick-button.html` in the public directory.
+The code example can be found in [Sticky Button](public/sticky-button.html) in the public directory.
 This documentation will cover how to style a the initial state of the button, as well as using some JavaScript to listen to the HTML DOM to transform the button into a sticky button that will stay on the bottom right side of the page.
 
 - [Initial Styling](#initial-styling)
