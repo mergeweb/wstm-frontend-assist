@@ -6,7 +6,7 @@ Code and documentation to support the web team at Westminster College
 We were asked to improve control over the gradient overlays found on pages like this one: [WestX3](https://westminstercollege.edu/_dev/westx/westx3.html)
 
 Specifically, the "Griffn Ready" row was mentioned as a good example (screenshot below):
-![Screenshot - Griffin Ready Row in Development (before)](/repository/README_images/griffin_before.png)
+![Screenshot - Griffin Ready Row in Development (before)](/README_images/griffin_before.png)
 
 ### Recommended Solution
 #### Use percentages in your CSS gradient definition
@@ -19,7 +19,7 @@ CSS Gradients can accept percentage parameters, which lets you control where the
 }
 ```
 Screenshot of results:
-![Screenshot - Griffin Ready Row in Development (before)](/repository/README_images/griffin_after.png)
+![Screenshot - Griffin Ready Row in Development (before)](/README_images/griffin_after.png)
 
 ### Other Tips
 Creating great CSS gradients quickly gets a lot easier with tools like [CSS Gradient](https://cssgradient.io/). Even if you're great at writing them by hand, it's often faster to use a generator when it's anything more complex than a two-color linear gradient.
