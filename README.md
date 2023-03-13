@@ -35,7 +35,7 @@ Creating great CSS gradients quickly gets a lot easier with tools like [CSS Grad
 
 # Stats Slider
 
-The code example can be found in the [Stats Slider HTML](public/stats-slider.html) file in the public folder.
+The code example can be found in the [Stats Slider HTML](public/stats-slider.html#L6846) file in the public folder.
 The stats sliders uses a JavaScript library called Swiper JS. This documentation will go over the proper workflow to implement the desired stats-slider:
 
 - [Swiper JS installation](#swiper-js-installation)
@@ -97,6 +97,7 @@ Swiper JS requires specific constructs to both the markup and the classnames. Th
 
 ## JavaScript Initialization
 
+Code Example: [Stats Slider JavaScript](_resources/js/stats-slider.js)
 To initialize the Swiper, we will need to add some code into a JS file. A JS file was create named `_resources/js/stats-slider.js` and added the script file in the footer of our HTML file **AFTER** the Swiper JS script file (see stats-slider.html for example).
 
 Essentially, Swiper uses a OOP to configure sliders. There is plenty of additional documentation on the Swiper API that can be found here: https://swiperjs.com/swiper-api
@@ -252,7 +253,7 @@ This same concept of using Swiper JS and styling the buttons appropraitely can b
 
 # Sticky Button
 
-The code example can be found in [Sticky Button](public/sticky-button.html) in the public directory.
+The code example can be found in [Sticky Button](public/sticky-button.html#L6818) in the public directory.
 This documentation will cover how to style a the initial state of the button, as well as using some JavaScript to listen to the HTML DOM to transform the button into a sticky button that will stay on the bottom right side of the page.
 
 - [Initial Styling](#initial-styling)
@@ -366,6 +367,7 @@ Sticky Button
 
 ## JavaScript for Sticky Button
 
+Code Example: [Sticky Button JavaScript](_resources/js/sticky-button.js)
 The basic function of the JavaScript is to listen for when the viewport has scrolled past the location of the button. If this condition true runs true, a class is added to the sticky button's classList. Then CSS will take over for the animation.
 
 ```
