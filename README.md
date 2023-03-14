@@ -1,7 +1,7 @@
 
-# wstm-frontend-assist
+# WSTM Westminster College Development Support
 
-Code and documentation for Westminster College
+Code and documentation to help support the web team at Westminster College
 
 # Table of Contents
 
