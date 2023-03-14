@@ -14,7 +14,7 @@ Code and documentation for Westminster College
 ## The request
 We were asked to improve control over the gradient overlays found on pages like this one: [WestX3](https://westminstercollege.edu/_dev/westx/westx3.html)
 
-Specifically, the "Griffn Ready" row was mentioned as a good example (screenshot below):
+Specifically, the "Griffin Ready" row was mentioned as a good example (screenshot below):
 ![Screenshot - Griffin Ready Row in Development (before)](/README_images/griffin_before.png)
 
 ### Recommended Solution
