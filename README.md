@@ -32,13 +32,20 @@ npm install
 ```
 Node will proceed to download and install all of the necessary modules for the server. 
 
-Once complete, run the following command from the project's root directory:
+## Starting and stopping the server
+Once everything is installed, run the following command from the project's root directory:
 ```
 npm start
 ```
 Node will start a server. Any files in the `/public/` directory will be available at http://127.0.0.1:8080 in the browser. On MacOS and some other systems, http://localhost:8080 will also work.
 
-_TIP: If port 8080 is not available, you can edit `/lib/server.js` and change the `
+_TIP:_ If port 8080 is not available, you can edit `/lib/server.js` and set `const port = 8080` to any port number you'd like.
+
+To stop the server, press `ctrl+C` in the terminal window (or simply end the entire terminal process).
+
+## List of preview URLs available on a running local server
+- Stats Slider http://127.0.0.1:8080/stats-slider
+- Sticky Button http://127.0.0.1:8080/sticky-button
 
 # Gradient Overlays for Rows
 ## The request
