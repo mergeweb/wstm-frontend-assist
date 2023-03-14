@@ -5,10 +5,40 @@ Code and documentation for Westminster College
 
 # Table of Contents
 
+- [How to Run the Code Examples](#how-to-run-the-code-examples)
 - [Gradient Overlays for Rows](#gradient-overlays-for-rows)
 - [Stats Sliders](#stats-slider)
 - [Sticky Button](#sticky-button)
 
+# How to Run the Code Examples
+The code examples in this repository can be previewed with the included nodeJS server. Running the examples is completely optional.
+
+## Requirements
+
+- [nodeJS](https://nodejs.dev/en/download/)
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+To check and see if you already have these installed, run the following commands:
+```
+node -v
+npm -v
+```
+If you get the version number for each back, you're good to go. If not, visit [Node's download page](https://nodejs.dev/en/download/) and install the version for your system.
+
+## Installing the server
+After cloning or downloading this repository, run the following command from the root directory:
+```
+npm install
+```
+Node will proceed to download and install all of the necessary modules for the server. 
+
+Once complete, run the following command from the project's root directory:
+```
+npm start
+```
+Node will start a server. Any files in the `/public/` directory will be available at http://127.0.0.1:8080 in the browser. On MacOS and some other systems, http://localhost:8080 will also work.
+
+_TIP: If port 8080 is not available, you can edit `/lib/server.js` and change the `
 
 # Gradient Overlays for Rows
 ## The request
